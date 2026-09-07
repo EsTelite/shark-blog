@@ -5,6 +5,7 @@ This folder contains the standards and references for the static Hugo blog.
 ## Documentation map
 
 - [Content and front matter standard](content-standard.md) — how to name, write, and publish posts.
+- [Copyable post template](post-template.md) — a ready-to-copy Markdown post starting point.
 - [Site configuration reference](site-configuration.md) — the Hugo configuration file, layouts, and static assets.
 - [Local development reference](local-development.md) — commands for previewing, building, and validating the site locally.
 
