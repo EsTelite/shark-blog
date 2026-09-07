@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post__header">
+    <p class="eyebrow">{{ .Section | title }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="post__date">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2 January 2006" }}</time>
+    </p>
+    {{ with .Description }}<p class="post__description">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="post__content">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.tags }}
+    <footer class="post__footer">
+      <p class="post__label">Tags</p>
+      <ul class="tag-list" aria-label="Post tags">
+        {{ range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </footer>
+  {{ end }}
+</article>
+{{ end }}

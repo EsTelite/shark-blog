@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="eyebrow">A simple static blog</p>
+  <h1>Ideas, notes, and things worth keeping.</h1>
+  <p class="hero__intro">{{ site.Params.description }}</p>
+</section>
+
+<section class="recent-posts" aria-labelledby="recent-posts-title">
+  <div class="section-heading">
+    <h2 id="recent-posts-title">Recent posts</h2>
+    <a href="{{ "posts/" | relURL }}">View all posts <span aria-hidden="true">&rarr;</span></a>
+  </div>
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ if $posts }}
+    <div class="post-list">
+      {{ range first 5 ($posts.ByDate.Reverse) }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+    </div>
+  {{ else }}
+    <p>No posts yet.</p>
+  {{ end }}
+</section>
+{{ end }}

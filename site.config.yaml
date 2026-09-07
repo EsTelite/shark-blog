@@ -1,0 +1,23 @@
+baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: "Shark Blog"
+
+publishDir: "public"
+
+params:
+  description: "A simple static blog for ideas, notes, and long-form writing."
+  author: "Your Name"
+
+permalinks:
+  posts: "/posts/:slug/"
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+
+enableRobotsTXT: true
