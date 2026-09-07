@@ -30,6 +30,7 @@ date: 2026-03-15T10:00:00+07:00
 draft: false
 description: "A short description used for the page metadata."
 summary: "A short excerpt shown in post listings."
+home_display: "preview"
 tags:
   - blogging
   - personal
@@ -48,6 +49,7 @@ image: "/images/my-first-post.png"
 | `draft` | Yes | Use the boolean values `true` or `false`, never quoted strings. |
 | `description` | No | Keep it concise and suitable for search and social metadata. |
 | `summary` | No | Use a readable excerpt for the post listing. |
+| `home_display` | No | Use `"full"` for one inline homepage article; use `"preview"` or omit it for a concise listing. |
 | `tags` | No | Use lowercase, specific terms. |
 | `categories` | No | Use a small number of broad categories. |
 | `image` | No | Use a site-relative path beginning with `/images/`. |
@@ -61,6 +63,16 @@ Use block-style YAML arrays for lists. Keep metadata values simple and avoid put
 - Set `draft: false` only after the post has been reviewed locally.
 - Do not use future publication dates unless the scheduled publishing behavior has been intentionally configured and tested.
 - Keep the `date` value explicit; do not rely only on the filename date.
+
+## Homepage display rules
+
+The homepage is a continuous reading stream, but it should not become a wall of full articles:
+
+- Posts default to `home_display: "preview"` when the field is omitted.
+- Use `home_display: "full"` deliberately for the one article that should be read inline on the homepage.
+- The homepage expands only the first post marked `full`; other posts remain previews.
+- Large or technically dense articles should normally remain `preview`.
+- Always write a useful `summary` for posts shown as previews.
 
 ## Markdown writing rules
 

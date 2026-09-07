@@ -1,0 +1,13 @@
+<article class="home-article">
+  <header class="home-article__header">
+    <p class="eyebrow">Latest article</p>
+    <h2>{{ .Title }}</h2>
+    <p class="post__date">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2 January 2006" }}</time>
+    </p>
+  </header>
+
+  <div class="home-article__content">
+    {{ .Content }}
+  </div>
+</article>

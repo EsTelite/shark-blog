@@ -1,20 +1,18 @@
 {{ define "main" }}
-<section class="hero">
-  <p class="eyebrow">A simple static blog</p>
-  <h1>Ideas, notes, and things worth keeping.</h1>
-  <p class="hero__intro">{{ site.Params.description }}</p>
-</section>
-
-<section class="recent-posts" aria-labelledby="recent-posts-title">
-  <div class="section-heading">
-    <h2 id="recent-posts-title">Recent posts</h2>
-    <a href="{{ "posts/" | relURL }}">View all posts <span aria-hidden="true">&rarr;</span></a>
-  </div>
+<section class="home-feed" aria-labelledby="home-feed-title">
+  <h1 id="home-feed-title" class="visually-hidden">{{ site.Title }} posts</h1>
   {{ $posts := where site.RegularPages "Section" "posts" }}
   {{ if $posts }}
     <div class="post-list">
-      {{ range first 5 ($posts.ByDate.Reverse) }}
-        {{ partial "post-card.html" . }}
+      {{ $expanded := false }}
+      {{ range $posts.ByDate.Reverse }}
+        {{ $mode := default "preview" .Params.home_display }}
+        {{ if and (not $expanded) (eq $mode "full") }}
+          {{ partial "featured-post.html" . }}
+          {{ $expanded = true }}
+        {{ else }}
+          {{ partial "post-card.html" . }}
+        {{ end }}
       {{ end }}
     </div>
   {{ else }}

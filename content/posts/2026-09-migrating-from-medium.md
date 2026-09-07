@@ -4,6 +4,7 @@ date: 2026-09-01T09:00:00+07:00
 draft: false
 description: "A practical look at moving from a hosted writing platform to a local-first Hugo blog."
 summary: "The reasons to own the source files, the publishing workflow, and the generated output."
+home_display: "full"
 tags:
   - writing
   - migration

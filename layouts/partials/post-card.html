@@ -1,8 +1,8 @@
 <article class="post-card">
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <p class="post-card__excerpt">{{ .Summary | plainify | truncate 220 }}</p>
+  <a class="text-link" href="{{ .RelPermalink }}" aria-label="Read more: {{ .Title }}">Read more <span aria-hidden="true">&rarr;</span></a>
   <p class="post-card__date">
     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2 January 2006" }}</time>
   </p>
-  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-  <p>{{ .Summary | plainify | truncate 220 }}</p>
-  <a class="text-link" href="{{ .RelPermalink }}">Read post <span aria-hidden="true">&rarr;</span></a>
 </article>

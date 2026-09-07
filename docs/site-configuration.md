@@ -15,7 +15,7 @@ The initial configuration should remain focused on local static development:
 
 ```yaml
 baseURL: "http://localhost:1313/"
-languageCode: "en-us"
+locale: "en-us"
 title: "Shark Blog"
 
 author:
