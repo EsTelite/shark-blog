@@ -1,13 +1,13 @@
 ---
-title: "Your post title"
+title: "Building things that continue to became a burden"
 date: 2026-09-07T09:00:00+07:00
-draft: true
-description: "A short description for the page metadata."
-summary: "A short preview shown on the homepage and posts list."
-home_display: "preview"
+draft: false
+description: "The more I built things, the more exhaustion it is in this era, with less rewarding feelings."
+summary: "An exploration of how AI coding tools can make building feel less rewarding and more exhausting."
+home_display: "full"
 tags:
-  - first-tag
-  - second-tag
+  - AI
+  - psychology
 categories:
   - general
 image: "/images/workout-tracker.png"
@@ -24,13 +24,13 @@ At the fourth week of the month am seeing that the "KIRO" Credits has a 800 left
 
 ![Workout tracker](/images/workout-tracker.png)
 
-Even after adding the feature the credit that are being used is not much, oh ya that because most of times I am using GPT 5.6 Luna with various effort even for the planning phase, and it's only 0.10 Multiplier (Terra 1.00 Multiplier .
+Even after adding the feature the credit that are being used is not much, oh ya that because most of times I am using GPT 5.6 Luna with various effort even for the planning phase, and it's only 0.10 Multiplier (Terra 1.00 Multiplier on KIRO) .
 
 More features that I want to build and add, the feeling of reward is diminishing and the longer I use the more I feel exhausted.
 
-More and more application that I want to built, more feature, more tools, more AI Coding tools that I utilize which is give me a feeling the more I utilize the less rewarding it is and more exhaustion that I feel. 
+More and more application that I want to built, more feature, more tools, more AI Coding tools that I utilize which is give me a feeling the more I utilize the less rewarding it is and more exhaustion that I feel.
 
-Previously writing code of feature that I want to built taking a lot of time and effort, <draft continue>
+Writing a code now is not a hardest part for me when building a simple tooling, deciding what things that I want to built or to do became a harder problem for me. As now the urge to built something is much bigger than thinking what I want to built and questioning what I built.
 
 As of now I feel the importance of choosing options than ever, focusing what's important became a more rewarding and more optimal way for me to use AI tools.
 

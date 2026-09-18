@@ -23,7 +23,9 @@ fi
 : "${R2_ACCESS_KEY_ID:?R2_ACCESS_KEY_ID must be set in $ENV_FILE or the environment}"
 : "${R2_SECRET_ACCESS_KEY:?R2_SECRET_ACCESS_KEY must be set in $ENV_FILE or the environment}"
 
-if [[ "${PURGE_CACHE,,}" == "true" ]]; then
+PURGE_CACHE_NORMALIZED=$(printf '%s' "$PURGE_CACHE" | tr '[:upper:]' '[:lower:]')
+
+if [[ "$PURGE_CACHE_NORMALIZED" == "true" ]]; then
   : "${CF_API_TOKEN:?CF_API_TOKEN must be set when PURGE_CACHE=true}"
   : "${CF_ZONE_ID:?CF_ZONE_ID must be set when PURGE_CACHE=true}"
 fi
@@ -68,7 +70,7 @@ if [[ -f "$OUTPUT_DIR/css/site.css" ]]; then
     --only-show-errors
 fi
 
-if [[ "${PURGE_CACHE,,}" == "true" ]]; then
+if [[ "$PURGE_CACHE_NORMALIZED" == "true" ]]; then
   echo "Purging Cloudflare cache for $SITE_URL"
   purge_payload=$(python3 -c 'import json, sys; print(json.dumps({"files": [sys.argv[1] + "/", sys.argv[1] + "/index.html", sys.argv[1] + "/css/site.css"]}))' "$SITE_URL")
   curl --fail-with-body --silent --show-error \
