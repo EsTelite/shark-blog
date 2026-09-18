@@ -1,11 +1,12 @@
 baseURL: "http://localhost:1313/"
 locale: "en-us"
-title: "Shark Blog"
+title: "c-blog"
 
 publishDir: "public"
 
 params:
   description: "A simple static blog for ideas, notes, and long-form writing."
+  tagline: "writing."
   author: "Your Name"
 
 permalinks:
